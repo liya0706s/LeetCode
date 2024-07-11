@@ -30,11 +30,27 @@ class Solution{
         // 遞歸計算左子樹和右子樹中的左葉子節點的和，並加到sum中
         return $sum+$this->sumOfLeftLeaves($root->left)+$this->sumOfLeftLeaves($root->right);
 
+    }
         // 檢查一個節點是否為葉子節點(即沒有左子節點和右子節點)
-       
-        
+       private function isLeaf($node){
+        return $node->left==null && $node->right == null;
+          
     }
 }
+
+// 範例
+
+// 建立一棵樹的根節點
+$root=new TreeNode(3);
+// 建立根節點的左子節點
+$root->left=new TreeNode(9);
+// 建立根節點的右子節點，以及右子節點的左右子節點
+$root->right=new TreeNode(20, new TreeNode(15), new TreeNode(7));
+
+// 創建解決方案的實例
+$solution=new Solution();
+// 計算並打印所有左葉子節點的和
+echo $solution->sumOfLeftLeaves($root);  // 輸出24
 
 
 ?>
