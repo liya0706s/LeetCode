@@ -9,7 +9,7 @@ class Solution{
         foreach($arr as $index=>$currentNum){
             // 如果當前索引是是數組的最後一個元素
             if($index==(count($arr)-1)){
-                // 將其值替換為 -1
+                // 將其新的數組 $newArr 值替換為 -1
                 $newArr[]=-1;
             // 如果當前索引不是最後一個元素
             }else{
