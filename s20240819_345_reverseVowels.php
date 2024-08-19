@@ -1,7 +1,7 @@
 <?php
 class Solution{
     function veverseVowels($s){
-        $vowels=['a','e','i','o','u'];
+        $vowels=['a','e','i','o','u','A','E','I','O','U'];
 
         // put an entire string into the array
         $sArr=str_split($s);
